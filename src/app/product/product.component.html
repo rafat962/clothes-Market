@@ -1,0 +1,138 @@
+<body>
+  <div class="content">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img width="150px" height="500px" [src]="products[id].main_img" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item" *ngFor="let img of products[id].sub_imgs">
+          <img width="150px" height="500px"  *ngIf="img" [src]="img" class="d-block w-100" alt="Image 2">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle bx-rotate-180' ></i></span>
+      </button>
+    </div>
+    <div class="details">
+      <div class="detail">
+        <h6 style="color: rgb(187, 198, 207);">POP TRADING CO</h6>
+        <h4>{{products[id].name}}</h4>
+        <h6>${{products[id].price}}</h6>
+        <h6>color: {{products[id].color}}</h6>
+        <h6>size: {{products[id].size}} <span style="color: rgb(187, 198, 207);">In stock</span></h6>
+        <div class="nums">
+          <a class="m" (click)="minuse(nu)">-</a>
+          <input type="number" #nu value="1">
+          <a class="p"(click)="plus(nu)">+</a>
+        </div>
+      </div>
+      <div class="btns">
+        <button (click)="addtobag()">ADD TO BAG</button>
+        <button>FIND IN STORE</button>
+      </div>
+      <div *ngIf="alert" class="alert alert-primary" role="alert">
+        You have successfully added the product
+      </div>
+    </div>
+  </div>
+  <section class="products">
+    <div class="content_products" style="padding-bottom: 120px;">
+      <h2>Customers Also Viewed</h2>
+    </div>
+      <div id="carouselExampleControlsNoTouching" class="carousel slide slider" data-bs-touch="false" data-bs-interval="false">
+        <div class="carousel-inner window" >
+          <div class="carousel-item active">
+            <div class="cardd" style="display: inline-block;"  [routerLink]="'../0'">
+              <img width="410px" height="410px" id="0"  [src]="products[0].main_img" [alt]="products[0].main_img2" #im >
+              <div class="center" (mouseenter)="enter(im)" (mouseleave)="leave(im)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[0].name}}</h5>
+              <h5 >${{products[0].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;"  [routerLink]="'../1'">
+              <img width="410px" height="410px" id="1" [src]="products[1].main_img" [alt]="products[1].main_img2" #im1>
+              <div class="center" (mouseenter)="enter(im1)" (mouseleave)="leave(im1)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[1].name}}</h5>
+              <h5 >${{products[1].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../2'">
+              <img width="410px" height="410px" id="2" [src]="products[2].main_img" [alt]="products[2].main_img2" #im2 >
+              <div class="center" (mouseenter)="enter(im2)" (mouseleave)="leave(im2)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[2].name}}</h5>
+              <h5 >${{products[2].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../3'">
+              <img width="410px" height="410px" id="3" [src]="products[3].main_img" [alt]="products[3].main_img2" #im3 >
+              <div class="center" (mouseenter)="enter(im3)" (mouseleave)="leave(im3)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[3].name}}</h5>
+              <h5 >${{products[3].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../4'">
+              <img width="410px" height="410px" id="4" [src]="products[4].main_img" [alt]="products[4].main_img2" #im4 >
+              <div class="center" (mouseenter)="enter(im4)" (mouseleave)="leave(im4)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[4].name}}</h5>
+              <h5 >${{products[4].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../5'">
+              <img width="410px" height="410px" id="5" [src]="products[5].main_img" [alt]="products[5].main_img2" #im5 >
+              <div class="center" (mouseenter)="enter(im5)" (mouseleave)="leave(im5)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[5].name}}</h5>
+              <h5 >${{products[5].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../6'">
+              <img width="410px" height="410px" id="6" [src]="products[6].main_img" [alt]="products[6].main_img2" #im6 >
+              <div class="center" (mouseenter)="enter(im6)" (mouseleave)="leave(im6)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[6].name}}</h5>
+              <h5 >${{products[6].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../7'">
+              <img width="410px" height="410px" id="7" [src]="products[7].main_img" [alt]="products[7].main_img2" #im7 >
+              <div class="center" (mouseenter)="enter(im7)" (mouseleave)="leave(im7)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[7].name}}</h5>
+              <h5 >${{products[7].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../8'">
+              <img width="410px" height="410px" id="8" [src]="products[8].main_img" [alt]="products[8].main_img2" #im8 >
+              <div class="center" (mouseenter)="enter(im8)" (mouseleave)="leave(im8)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[8].name}}</h5>
+              <h5 >${{products[8].price}}</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle' ></i></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle bx-rotate-180' ></i></span>
+  </button>
+</div>
+  <div class="content_products" style="padding-top: 100px;">
+  </div>
+  </section>
+  <footer class="footer2">
+    <h1>Sign up to be the first to hear about new releases, exclusives and sale.</h1>
+    <a class="shop-now">SIGN UP NOW</a>
+  </footer>
+</body>

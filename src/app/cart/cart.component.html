@@ -1,0 +1,179 @@
+<body>
+  <section *ngIf="isempt" class="sec1">
+    <div class="detail">
+      <h1>Your Bag</h1>
+      <h3>Your bag is empty</h3>
+      <div class="btns">
+        <button routerLink="../men/shop_more">START SHOPPING</button>
+      </div>
+    </div>
+  </section>
+  <section *ngIf="!isempt" class="sec2">
+    <header>
+      <h2>Your Bag</h2>
+      <p>You are eligible for free shipping!</p>
+      <div class="progress">
+        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    </header>
+    <div class="details">
+      <div class="left">
+        <div class="delvery">
+          <p class="headname">DELIVERY TYPE</p>
+          <hr>
+            <button class="h">HOME DELIVERY</button>
+            <button class="c">CLICK & COLLECT</button>
+        </div>
+        <div class="product">
+          <p class="headname">PRODUCTS</p>
+          <hr>
+        </div>
+        <div class="lleft" *ngFor="let x of local_products;let i =index">
+          <div class="cared" >
+            <div class="card-left" (click)="navproduct(x.item.idd)">
+              <img width="120px" height="120px" [src]="x.item.main_img" alt="">
+              <div class="img_data">
+              <p class="headname">NIKE</p>
+                <p>{{x.item.name}}</p>
+                <p class="headname">SIZE : {{x.item.size}}</p>
+              </div>
+            </div>
+            <div class="card-middle">
+              <div class="nums">
+                <a class="m" (click)="minuse(nu)">-</a>
+                <input type="number" [id]="i" #nu [value]="x.amount">
+                <a class="p"(click)="plus(nu)">+</a>
+              </div>
+              <a class="shop-now" (click)="remove(i)">Remove</a>
+            </div>
+            <div class="card-right">
+              <p style="font-weight: 600;">${{x.item.price * +nu.value}}</p>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="right" *ngFor="let x of local_products;let i =index">
+          <div class="checkout">
+            <div class="info">
+              <h6>Subtotal</h6>
+              <h6>${{total}}</h6>
+            </div>
+            <div class="info">
+              <h6>Shipping</h6>
+              <h6>FREE</h6>
+            </div>
+            <div class="info">
+              <h6>total</h6>
+              <h6>${{total}}</h6>
+            </div>
+            <div class="info">
+              <p style="font-size: 13px;">Discounts will be calculated next at checkout</p>
+            </div>
+            <div class="btns">
+              <button routerLink="../check">PROCEED TO CHECKOUT</button>
+            </div>
+          </div>
+          <div class="payment">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="products">
+    <div class="content_products" style="padding-bottom: 120px;">
+      <h2>You May Also Like</h2>
+    </div>
+      <div id="carouselExampleControlsNoTouching" class="carousel slide slider" data-bs-touch="false" data-bs-interval="false">
+        <div class="carousel-inner window" >
+          <div class="carousel-item active">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../0'">
+              <img width="410px" height="410px" id="0"  [src]="products[0].main_img" [alt]="products[0].main_img2" #im >
+              <div class="center" (mouseenter)="enter(im)" (mouseleave)="leave(im)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[0].name}}</h5>
+              <h5 >${{products[0].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;"[routerLink]="'../1'">
+              <img width="410px" height="410px" id="1" [src]="products[1].main_img" [alt]="products[1].main_img2" #im1>
+              <div class="center" (mouseenter)="enter(im1)" (mouseleave)="leave(im1)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[1].name}}</h5>
+              <h5 >${{products[1].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../2'">
+              <img width="410px" height="410px" id="2" [src]="products[2].main_img" [alt]="products[2].main_img2" #im2 >
+              <div class="center" (mouseenter)="enter(im2)" (mouseleave)="leave(im2)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[2].name}}</h5>
+              <h5 >${{products[2].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../3'">
+              <img width="410px" height="410px" id="3" [src]="products[3].main_img" [alt]="products[3].main_img2" #im3 >
+              <div class="center" (mouseenter)="enter(im3)" (mouseleave)="leave(im3)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[3].name}}</h5>
+              <h5 >${{products[3].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../4'">
+              <img width="410px" height="410px" id="4" [src]="products[4].main_img" [alt]="products[4].main_img2" #im4 >
+              <div class="center" (mouseenter)="enter(im4)" (mouseleave)="leave(im4)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[4].name}}</h5>
+              <h5 >${{products[4].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../5'">
+              <img width="410px" height="410px" id="5" [src]="products[5].main_img" [alt]="products[5].main_img2" #im5 >
+              <div class="center" (mouseenter)="enter(im5)" (mouseleave)="leave(im5)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[5].name}}</h5>
+              <h5 >${{products[5].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../6'">
+              <img width="410px" height="410px" id="6" [src]="products[6].main_img" [alt]="products[6].main_img2" #im6 >
+              <div class="center" (mouseenter)="enter(im6)" (mouseleave)="leave(im6)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[6].name}}</h5>
+              <h5 >${{products[6].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../7'">
+              <img width="410px" height="410px" id="7" [src]="products[7].main_img" [alt]="products[7].main_img2" #im7 >
+              <div class="center" (mouseenter)="enter(im7)" (mouseleave)="leave(im7)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[7].name}}</h5>
+              <h5 >${{products[7].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../8'">
+              <img width="410px" height="410px" id="8" [src]="products[8].main_img" [alt]="products[8].main_img2" #im8 >
+              <div class="center" (mouseenter)="enter(im8)" (mouseleave)="leave(im8)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[8].name}}</h5>
+              <h5 >${{products[8].price}}</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle' ></i></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle bx-rotate-180' ></i></span>
+  </button>
+</div>
+  <div class="content_products" style="padding-top: 100px;">
+  </div>
+  <footer class="footer2">
+    <h1>Sign up to be the first to hear about new releases, exclusives and sale.</h1>
+    <a class="shop-now">SIGN UP NOW</a>
+  </footer>
+  </section>
+</body>
+
+

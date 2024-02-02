@@ -1,0 +1,71 @@
+<body>
+  <div class="head">
+    <h1>Carts</h1>
+    <hr>
+  </div>
+  <div class="carts">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">UserName</th>
+          <th scope="col">Email</th>
+          <th scope="col">State</th>
+          <th scope="col">City</th>
+          <th scope="col">Zip</th>
+          <th scope="col">View</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody  *ngFor="let x of data;let i=index">
+        <tr>
+          <th scope="row">{{i}}</th>
+          <td>{{x.userdata.fname}}</td>
+          <td>{{x.userdata.email}}</td>
+          <td>{{x.userdata.state}}</td>
+          <td>{{x.userdata.city}}</td>
+          <td>{{x.userdata.zip}}</td>
+          <td><button (click)="getid(i)" class="btn btn-success" onclick="document.getElementById('myModal').style.display='block'">View</button></td>
+          <td><button class="btn btn-danger">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+<div class="modal" id="myModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="document.getElementById('myModal').style.display='none'" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>Items: </h1>
+        <hr>
+        <div class="cards">
+          <div class="carda" *ngFor="let x of itemm;let i=index">
+            <div>
+              <img width="150px" height="150px" [src]="x.item.main_img" alt="">
+            </div>
+            <br>
+            <div class="detail">
+              <p>{{x.item.name}} : name</p>
+              <p>{{x.item.price}}$ : price</p>
+              <p>{{x.item.size}} : size</p>
+              <p>{{x.item.color}} : color</p>
+              <p>{{x.amount}} : amount</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" onclick="document.getElementById('myModal').style.display='none'" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <button >
+  Open Modal
+</button>
+<router-outlet></router-outlet> -->
+

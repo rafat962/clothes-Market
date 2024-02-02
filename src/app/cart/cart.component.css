@@ -1,0 +1,300 @@
+
+.sec1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-bottom: 270px;
+  padding-top: 125px;
+}
+.detail h1{
+  font-size: 60px;
+  font-family:'Gill Sans';
+}
+.btns button{
+  height: 60px;
+  width: 200px;
+}
+.btns button:first-child{
+  color: white;
+  background-color:#6e8e7d ;
+  transition: all .40s ease;
+  border: #465a50 1px solid ;
+}
+.btns button:first-child:hover{
+  background-color:#465a50 ;
+  transform: 0.4s;
+}
+.products{
+  background-color: rgb(250, 238, 238);
+  padding-top: 20px;
+  margin-top: 187px;
+}
+.content_products{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.slider{
+  height: 300px;
+  width: 100%;
+
+}
+.window{
+  padding-left: 160px;
+}
+.cardd img{
+  cursor: pointer;
+}
+.cardd{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  padding-right: 15px;
+  position: relative;
+}
+
+img {
+  transition: transform 0.5s ease-in-out;
+}
+.slider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center{
+  width: 140px;
+  height: 220px;
+  position: absolute;
+  top: 75px;
+  left: 100px;
+  cursor: pointer;
+  transition: all .40s ease;
+}
+#myCarousel{
+  width: 500px;
+  height: 500px;
+}
+.shop-now{
+  font-family: 'Segoe UI';
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  transition: all .40s ease;
+}
+.footer2{
+  height: 130px;
+  background-color: #ca8e6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer2 h1{
+  color: black;
+  font-size: 25px;
+}
+
+header{
+  background-color: rgb(250, 238, 238);
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.progress{
+  width: 300px;
+  height: 9px;
+  color:#465a50;
+}
+
+.headname{
+  color: rgb(105, 120, 133);
+  font-size:15px;
+}
+.left{
+  width: 65%;
+  height: 100vh;
+  padding-top: 70px;
+  padding-left: 50px;
+}
+.h{
+  width: 400px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  border: black solid 1px;
+  transition: all.40s ease;
+}
+.c{
+  width: 400px;
+  height: 60px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  border: black solid 1px;
+  transition: all.40s ease;
+}
+.h:hover{
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+.c:hover{
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+.product{
+  padding-top: 50px;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 110px;
+  position: relative;
+}
+.cared{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+.card-left{
+  display: flex;
+  cursor: pointer;
+}
+.lleft{
+  display: grid;
+align-items: center;
+
+}
+.img_data{
+  padding-left: 15px;
+  gap: -4px;
+}
+.card-middle{
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  left: 550px;
+}
+.nums input{
+  text-align: center;
+}
+.nums{
+  position: relative;
+  display: felx;
+  align-items: center;
+  justify-content: center;
+}
+.nums input{
+  width: 90px;
+}
+.m{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(105, 120, 133);
+  width: 25px;
+  height: 28px;
+  left: 0px;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .40s ease;
+  text-decoration: none;
+}
+.p{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(105, 120, 133);
+  width: 25px;
+  height: 28px;
+  right: 0px;
+  top: 0;
+  font-size: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all .40s ease;
+  text-decoration: none;
+}
+.m:hover, .p:hover {
+  background-color: #b7cfc2;
+  transition: 0.3s;
+}
+.shop-now{
+  font-family: 'Segoe UI';
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  transition: all .40s ease;
+  padding-top: 15px;
+  font-size: 15px;
+}
+.shop-now:hover{
+  text-decoration-color: orange;
+  transition: 0.5s;
+}
+
+.right{
+  width: 10%;
+  height: 100vh;
+  position: absolute;
+  left: 950px;
+  top: 250px;
+}
+.checkout{
+  width: 380px;
+  height:260px;
+  background-color:rgb(250, 238, 238);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.info{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btns button{
+  height: 50px;
+  width: 370px;
+  color: #465a50;
+  background-color:white ;
+  transition: all .40s ease;
+  border: #465a50 1px solid ;
+}

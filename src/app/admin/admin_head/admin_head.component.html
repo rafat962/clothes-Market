@@ -1,0 +1,17 @@
+<nav>
+  <h2 class="logo" [routerLink]="''">Moon</h2>
+  <div class="mains">
+    <h4 class="item" [routerLink]="'../admin'" routerLinkActive="">Log in</h4>
+    <h4 class="item" [routerLink]="'products'" routerLinkActive="active">Products</h4>
+    <h4 class="item" routerLink="carts" routerLinkActive="active">Carts</h4>
+  </div>
+  <div class="icons">
+  </div>
+</nav>
+<div style="padding-top: 70px;">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+

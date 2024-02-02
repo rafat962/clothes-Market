@@ -1,0 +1,80 @@
+<body>
+  <div class="head">
+    <h1>Add New Product</h1>
+    <hr>
+  </div>
+  <form class="row g-3" #f="ngForm" (ngSubmit)="sub()">
+    <div class="col-md-3">
+      <label for="validationServer01" class="form-label">Product name</label>
+      <input type="text" class="form-control is-valid" id="validationServer01" value="rafat" ngModel name="name" >
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Product size</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="size" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Product color</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="color" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Product Price</label>
+      <input type="number" class="form-control is-valid" id="validationServer02" ngModel name="Price" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Main Image URL</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="main_img" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Sub Image URL</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="main_img2" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Sub Image URL 1</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="sub1" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Sub Image URL 2</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="sub2" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer02" class="form-label">Sub Image URL 3</label>
+      <input type="text" class="form-control is-valid" id="validationServer02" ngModel name="sub3" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+    <div *ngIf="alert" class="alert alert-primary" role="alert">
+      You have successfully send request
+    </div>
+  </form>
+
+
+
+</body>

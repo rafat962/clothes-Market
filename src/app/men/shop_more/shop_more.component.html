@@ -1,0 +1,19 @@
+<body>
+  <div class="all">
+    <div class="cards">
+      <div class="card" style="width: 18rem;" *ngFor="let x of products;let i=index" >
+        <img  class="card-img-top" width="350px" height="350px" [id]="i" [src]="products[i].main_img" [alt]="products[i].main_img2" #im6 >
+        <div class="center" (mouseenter)="enter(im6)" (mouseleave)="leave(im6)"></div>
+        <div class="card-body">
+          <h5 class="card-title">{{x.name}}</h5>
+          <p class="card-text">{{x.price}}</p>
+          <a  class="btn btn-primary" routerLink="../../{{i}}">View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer2">
+    <h1>Sign up to be the first to hear about new releases, exclusives and sale.</h1>
+    <h6 class="shop-now">SIGN UP NOW</h6>
+  </footer>
+</body>

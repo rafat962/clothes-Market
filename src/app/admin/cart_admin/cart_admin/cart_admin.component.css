@@ -1,0 +1,34 @@
+.head{
+  padding-left: 20px;
+}
+.carts{
+  display: flex;
+  flex-direction: column;
+}
+.cart{
+  display: flex;
+}
+.table{
+  text-align: center;
+}
+.cards{
+  display: flex;
+  flex-direction: column;
+}
+.carda{
+  width: 100%;
+  display: flex;
+  padding-top: 28px;
+
+}
+.detail{
+  display: flex;
+  flex-direction: column;
+  align-items:end;
+  justify-content: end;
+  direction: ltr;
+  width: 100%;
+}
+.detail p{
+  font-size: 12px;
+}

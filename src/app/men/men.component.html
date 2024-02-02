@@ -1,0 +1,146 @@
+<body>
+  <section class="main">
+    <div class="cards">
+      <div class="card">
+        <img src="//www.incu.com/cdn/shop/files/mens1_0a6c4b69-9237-4cc1-aa07-b195a715ac31_1200x.png?v=1695878434" alt="">
+        <h2>Closer Still</h2>
+        <a class="shop-now" [routerLink]="'shop_more'">SHOP THE NEW SEASON</a>
+      </div>
+      <div class="card">
+        <img src="//www.incu.com/cdn/shop/files/mens2_f5303276-2c93-47e6-acff-a54160f6a03d_1200x.png?v=1695878463" alt="">
+        <h2>Discover Our Spring Camp</h2>
+        <a class="shop-now">READ MORE</a>
+      </div>
+    </div>
+  </section>
+  <section class="products">
+    <div class="content_products" style="padding-bottom: 120px;">
+      <h2>New Arrivals</h2>
+    </div>
+      <div style="display: flex; align-items: center; justify-content: center;" id="carouselExampleControlsNoTouching" class="carousel slide slider" data-bs-touch="false" data-bs-interval="false">
+        <div class="carousel-inner window" >
+          <div class="carousel-item active">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../0'">
+              <img width="410px" height="410px" id="0"  [src]="products[0].main_img" [alt]="products[0].main_img2" #im >
+              <div class="center" (mouseenter)="enter(im)" (mouseleave)="leave(im)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[0].name}}</h5>
+              <h5 >${{products[0].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;"[routerLink]="'../1'">
+              <img width="410px" height="410px" id="1" [src]="products[1].main_img" [alt]="products[1].main_img2" #im1>
+              <div class="center" (mouseenter)="enter(im1)" (mouseleave)="leave(im1)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[1].name}}</h5>
+              <h5 >${{products[1].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../2'">
+              <img width="410px" height="410px" id="2" [src]="products[2].main_img" [alt]="products[2].main_img2" #im2 >
+              <div class="center" (mouseenter)="enter(im2)" (mouseleave)="leave(im2)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[2].name}}</h5>
+              <h5 >${{products[2].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../3'">
+              <img width="410px" height="410px" id="3" [src]="products[3].main_img" [alt]="products[3].main_img2" #im3 >
+              <div class="center" (mouseenter)="enter(im3)" (mouseleave)="leave(im3)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[3].name}}</h5>
+              <h5 >${{products[3].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../4'">
+              <img width="410px" height="410px" id="4" [src]="products[4].main_img" [alt]="products[4].main_img2" #im4 >
+              <div class="center" (mouseenter)="enter(im4)" (mouseleave)="leave(im4)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[4].name}}</h5>
+              <h5 >${{products[4].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../5'">
+              <img width="410px" height="410px" id="5" [src]="products[5].main_img" [alt]="products[5].main_img2" #im5 >
+              <div class="center" (mouseenter)="enter(im5)" (mouseleave)="leave(im5)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[5].name}}</h5>
+              <h5 >${{products[5].price}}</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../6'">
+              <img width="410px" height="410px" id="6" [src]="products[6].main_img" [alt]="products[6].main_img2" #im6 >
+              <div class="center" (mouseenter)="enter(im6)" (mouseleave)="leave(im6)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[6].name}}</h5>
+              <h5 >${{products[6].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../7'">
+              <img width="410px" height="410px" id="7" [src]="products[7].main_img" [alt]="products[7].main_img2" #im7 >
+              <div class="center" (mouseenter)="enter(im7)" (mouseleave)="leave(im7)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[7].name}}</h5>
+              <h5 >${{products[7].price}}</h5>
+            </div>
+            <div class="cardd" style="display: inline-block;" [routerLink]="'../8'">
+              <img width="410px" height="410px" id="8" [src]="products[8].main_img" [alt]="products[8].main_img2" #im8 >
+              <div class="center" (mouseenter)="enter(im8)" (mouseleave)="leave(im8)"></div>
+              <p style="font-size: 11px; margin-top: 5px;">A.P.C.</p>
+              <h5 style="font-size: 17px;">{{products[8].name}}</h5>
+              <h5 >${{products[8].price}}</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle' ></i></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually" style="color: black; font-size: 50px;"><i class='bx bxs-skip-previous-circle bx-rotate-180' ></i></span>
+  </button>
+</div>
+  <div class="content_products" style="padding-top: 100px;">
+    <a class="shop-now" style="font-weight: bold;" [routerLink]="'shop_more'">SHOP MORE</a>
+  </div>
+  </section>
+  <section class="Pop">
+    <div class="pop-img">
+      <img width="1100" height="700" src="//www.incu.com/cdn/shop/files/mens3_68d41954-7746-4889-9f97-adffe98ade19_2800x.png?v=1693201769" alt="">
+    </div>
+    <div class="detail-pop">
+      <h2>Pop Trading Company</h2>
+      <p>Founded by Peter Kolks and Ric van Rest in 2003, Pop Trading Company is known as Amsterdam’s best skate brand and continues to establish a refined aesthetic inspired by skateboarding, their local
+        community and growing up in the 90s.</p>
+        <a class="shop-now" style="font-weight: bold;" [routerLink]="'shop_more'">SHOP NOW</a>
+    </div>
+  </section>
+  <section class="offers">
+    <div class="image-container">
+      <img src="//www.incu.com/cdn/shop/files/mens4_8a89d532-7ba6-4776-961e-f5c7011dd3d1_1200x.png?v=1695967002" alt="">
+      <div class="image-text">
+        <h3>Accessories</h3>
+        <a class="shop-now" [routerLink]="'shop_more'">DISCOVER</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="//www.incu.com/cdn/shop/files/mens5_1_1200x.png?v=1695968061" alt="">
+      <div class="image-text">
+        <h3>Sneakers</h3>
+        <a class="shop-now" [routerLink]="'shop_more'">DISCOVER</a>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="//www.incu.com/cdn/shop/files/mens6_974bbbd0-b796-4263-a359-91ebc88ff4e0_1200x.png?v=1695966932" alt="">
+      <div class="image-text">
+        <h3>Bode</h3>
+        <a class="shop-now" [routerLink]="'shop_more'">DISCOVER</a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer2">
+    <h1>Sign up to be the first to hear about new releases, exclusives and sale.</h1>
+    <a class="shop-now">SIGN UP NOW</a>
+  </footer>
+</body>

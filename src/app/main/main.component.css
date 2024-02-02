@@ -1,0 +1,201 @@
+
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(3, 3, 27);
+  color: white;
+  font-family: 'Gill Sans';
+}
+.first{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.content{
+  padding: 140px 0 0 100px;
+}
+.content h1{
+  transition: all .40s ease;
+}
+.content h1:hover{
+  color: red;
+  cursor: pointer;
+  transform: translateX(7px);
+  transition: 0.5s;
+}
+.img{
+  margin-left: 80px;
+  position: absolute;
+  right: 0;
+}
+.img img{
+  width: 120vh;
+  height: 100vh;
+}
+.seconde{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-top: 50px;
+}
+.seconde img{
+  width: 600px;
+  height: 525px;
+}
+.image-container {
+  position: relative; /* Make the container position relative */
+  display: inline-block; /* Make the container display as inline-block */
+}
+.image-text {
+  position: absolute; /* Position the text absolutely */
+  top: 50%; /* Align the text to the vertical center of the container */
+  left: 50%; /* Align the text to the horizontal center of the container */
+  transform: translate(-50%, -50%); /* Move the text back by 50% of its own width and height */
+}
+.image-text a {
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all .40s ease;
+}
+.image-text a:hover{
+  color: red;
+  transform: translateX(7px);
+  transition: 0.4s;
+}
+
+.third{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.all-cards {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+.shop-now{
+  font-family: 'Segoe UI';
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+  transition: all .40s ease;
+}
+.shop-now:hover{
+  text-decoration-color: orange;
+  transition: 0.5s;
+}
+.fourth{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+.boxx{
+  color: black;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 400px;
+  height: 300px;
+  position: relative;
+  left: 180px;
+}
+.fifth{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  background-color: rgb(250, 238, 238);
+}
+.locate{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  gap: 1rem;
+  padding-bottom: 90px;
+  padding-top: 90;
+  padding-top: 50px;
+  font-family:'Franklin Gothic Medium';
+}
+.store_img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: black;
+  padding-bottom: 100px;
+}
+
+.store{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.store h2:hover{
+  cursor: pointer;
+  color: red;
+  transition: 0.5s;
+}
+
+.footer1{
+  height: 240px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.foot{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  width: 250px;
+  text-align: center;
+  gap: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h6{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.iicon{
+  font-size: 30px;
+}
+/*
+ca8e6f */
+.footer2{
+  height: 130px;
+  background-color: #ca8e6f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer2 h1{
+  color: black;
+  font-size: 25px;
+}
+
